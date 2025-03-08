@@ -22,7 +22,7 @@ const FooterWithContact = () => {
 
       if (response.ok) {
         setFormStatus("success");
-        form.reset(); // איפוס הטופס אחרי שליחה מוצלחת
+        form.reset(); // Reset form after successful submission
       } else {
         setFormStatus("error");
       }
@@ -37,13 +37,13 @@ const FooterWithContact = () => {
       className="relative font-rubik mt-20 bg-[#092274] text-white py-16 px-6 lg:px-24"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center">
-        {/* טופס יצירת קשר */}
+        {/* Contact Form */}
         <div className="lg:w-1/2 mt-[-140px] w-full border border-[#092274] border-[5px] bg-white text-[#092274] rounded-lg shadow-lg p-6 lg:relative ">
           <h2 className="text-2xl lg:text-3xl font-bold mb-5 text-center md:text-right">
             צור קשר
           </h2>
           <form
-            action="https://formspree.io/f/xzzzklrr"
+            action="https://formspree.io/f/xgvawpqk" // Updated Formspree URL
             method="POST"
             className="space-y-4"
             onSubmit={handleSubmit}
@@ -121,7 +121,7 @@ const FooterWithContact = () => {
           )}
         </div>
 
-        {/* פוטר */}
+        {/* Footer */}
         <div className="lg:w-1/2 lg:mr-10 flex flex-col text-center lg:text-right mt-5 md:-mt-16 space-y-6">
           <div>
             <Image
