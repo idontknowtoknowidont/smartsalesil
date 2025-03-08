@@ -13,7 +13,7 @@ const FooterWithContact = () => {
 
     try {
       const response = await fetch(form.action, {
-        method: form.method,
+        method: "POST",
         body: new FormData(form),
         headers: {
           Accept: "application/json",
@@ -43,7 +43,7 @@ const FooterWithContact = () => {
             צור קשר
           </h2>
           <form
-            action="https://formspree.io/f/xgvawpqk" // Updated Formspree URL
+            action="https://formspree.io/f/xgvawpqk"
             method="POST"
             className="space-y-4"
             onSubmit={handleSubmit}
