@@ -4,6 +4,7 @@
 
 :root {
   --background: #ffffff;
+  --foreground: #000000; /* Added a default foreground color */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,33 +30,41 @@ body {
 section {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh; /* Allow content to expand instead of forcing full screen */
+  padding: 2rem 0; /* Adds spacing so sections don’t collapse */
 }
 
-/* Full-screen background image with no zooming effect */
 .image-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover; /* Ensures the image covers the screen */
-  background-position: center; /* Keeps image centered */
-  background-attachment: fixed; /* Keeps background fixed while scrolling */
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* Changed from fixed to avoid mobile issues */
 }
 
 .form-wrapper {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Adds spacing between elements */
 }
 
 .contact-form, .calendly-form {
   position: relative;
   z-index: 2;
+  width: 100%; /* Ensures full width on mobile */
+  max-width: 500px; /* Restricts size for larger screens */
 }
 
 @media (max-width: 768px) {
   .contact-form, .calendly-form {
-    transform: scale(0.9); /* Adjust scaling for smaller screens */
+    transform: scale(1); /* Keep it normal size */
+    width: 90%; /* Allow responsiveness */
+    margin: 0 auto; /* Center it */
   }
 }
