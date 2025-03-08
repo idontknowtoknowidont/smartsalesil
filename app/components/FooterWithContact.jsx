@@ -139,7 +139,7 @@ const FooterWithContact = () => {
           <div className="flex flex-col lg:flex-row gap-6 justify-center lg:justify-start">
             <div>
               <p className="font-bold">כתובת אימייל:</p>
-              <p className="text-sm">Yoad@smartsalesil.com</p>
+              <p className="text-sm">office@smartsalesil.com</p>
             </div>
           </div>
           <nav className="flex flex-col lg:flex-row gap-4 justify-center lg:justify-start">
